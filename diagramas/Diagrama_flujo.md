@@ -1,10 +1,12 @@
 ```mermaid
 flowchart TB
-    A([Inicio])--> B[/Capturar datos del asistente/]
+    A([Inicio])--> B[/Registrar datos/]
     B-->C{¿Datos completos?}
-    C-->s1[Si]-->D[Registrar asistente]
-    D-->E[/Mostrar Confirmación/]
-    C-->s2[No]-->F[/Mostrar información faltante/]
+    C-->|Si| D{¿El correo existe?}
+    D-->|Si| H[/Advertencia/]
+    D-->|No| E[Registro]
+    C-->|No| F[/Mostrar datos faltantes/]
+    F-->G
     E-->G([Fin])
-    F-->E
+    H-->G
 ```
