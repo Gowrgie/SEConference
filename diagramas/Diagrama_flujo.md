@@ -1,7 +1,4 @@
----
-config:
-  theme: redux
----
+```mermaid
 flowchart TB
     A([Inicio])--> B[/Capturar datos del asistente/]
     B-->C{¿Datos completos?}
@@ -10,4 +7,4 @@ flowchart TB
     C-->s2[No]-->F[/Mostrar información faltante/]
     E-->G([Fin])
     F-->E
-
+```
